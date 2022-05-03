@@ -96,18 +96,59 @@ def playbook__investigate__dns_lookup_1(action=None, success=None, container=Non
     ################################################################################
 
     # call playbook "custom/[Investigate] DNS Lookup", returns the playbook_run_id
-    playbook_run_id = phantom.playbook("custom/[Investigate] DNS Lookup", container=container, name="playbook__investigate__dns_lookup_1", callback=playbook__investigate__dns_lookup_1_callback, inputs=inputs)
+    playbook_run_id = phantom.playbook("custom/[Investigate] DNS Lookup", container=container, name="playbook__investigate__dns_lookup_1", callback=post_data_1, inputs=inputs)
 
     return
 
 
-def playbook__investigate__dns_lookup_1_callback(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug("playbook__investigate__dns_lookup_1_callback() called")
+def post_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug("post_data_1() called")
 
-    
-    # Downstream End block cannot be called directly, since execution will call on_finish automatically.
-    # Using placeholder callback function so child playbook is run synchronously.
+    # phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
 
+    parameters = []
+
+    parameters.append({
+        "body": "{\"",
+        "location": "/rest/playbook_run",
+        "verify_certificate": False,
+    })
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################
+
+    phantom.act("post data", parameters=parameters, name="post_data_1", assets=["self"], callback=get_custom_fields_3)
+
+    return
+
+
+def get_custom_fields_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug("get_custom_fields_3() called")
+
+    parameters = []
+
+    parameters.append({
+        "container": container,
+    })
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################
+
+    phantom.custom_function(custom_function="custom/get_custom_fields", parameters=parameters, name="get_custom_fields_3")
 
     return
 

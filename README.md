@@ -1,2 +1,2 @@
 # splunk_soar_playbooks
-SOAR playbook repo
+SOAR repo for Professional Services playbooks and custom functions

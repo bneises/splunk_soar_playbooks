@@ -1,5 +1,5 @@
 {
-    "create_time": "2022-05-03T13:36:54.601495+00:00",
+    "create_time": "2022-05-03T14:52:11.203627+00:00",
     "custom_function_id": "3782016fbcef525f6cf5cf7b308c3cf8c2e4790b",
     "description": "",
     "draft_mode": false,
@@ -8,7 +8,7 @@
             "contains_type": [],
             "description": "",
             "input_type": "item",
-            "name": "container_id",
+            "name": "container",
             "placeholder": ""
         }
     ],

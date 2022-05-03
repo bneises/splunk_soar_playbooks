@@ -1,7 +1,7 @@
-def get_custom_fields(container_id=None, **kwargs):
+def get_custom_fields(container=None, **kwargs):
     """
     Args:
-        container_id
+        container
     
     Returns a JSON-serializable object that implements the configured data paths:
         
@@ -12,12 +12,17 @@ def get_custom_fields(container_id=None, **kwargs):
     
     outputs = {}
     
-    if isinstance(container_id, int):
-        pass
-    elif isinstance(container_id, dict):
-        pass
+    # Ensure valid container input
+    if isinstance(container, dict) and container.get('id'):
+        # container_id = container['id']
+        phantom.debug(container)
+    elif isinstance(container, int):
+        container_id = container
+        
     else:
-        raise TypeError()
+        raise TypeError("The input 'container' is neither a container dictionary nor an int.")
+        
+    
     
     # Return a JSON-serializable object
     assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable

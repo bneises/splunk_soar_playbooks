@@ -1,5 +1,5 @@
 {
-    "create_time": "2022-05-18T20:11:28.287835+00:00",
+    "create_time": "2022-05-18T20:13:34.779831+00:00",
     "custom_function_id": "65f7246a556f01eac29230959b36c8e97852102c",
     "description": "Print debug messages with the type and value of 0-10 different inputs. This is useful for checking the values of input data or the outputs of other playbook blocks.",
     "draft_mode": false,

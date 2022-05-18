@@ -25,6 +25,8 @@ def debug(input_1=None, input_2=None, input_3=None, input_4=None, input_5=None, 
     
     output = []
     for index, input_value in enumerate([input_1, input_2, input_3, input_4, input_5, input_6, input_7, input_8, input_9, input_10]):
+        if not input_value:
+            continue
         this_output = {}
         phantom.debug("input_{}:".format(index+1))
         this_output['input_name'] = "input_{}".format(index+1)        

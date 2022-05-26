@@ -1,0 +1,168 @@
+{
+    "create_time": "2022-05-26T14:00:13.758510+00:00",
+    "custom_function_id": "7d045ab9f3775c17a7cef4af3d8c0451dd6d98b2",
+    "description": "Collates lists of inputs to each other using the python zip function, along with extending any lists that are shorter. This allows playbook inputs to be merged together and used in tandem downstream.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input0",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input1",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input2",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input3",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input4",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input5",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input6",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input7",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "input8",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "If headers are included, they will be used as key names for the outputs on top of the default output# naming and can be referenced by name instead of remembering what input goes to which output.",
+            "input_type": "list",
+            "name": "headers",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output0",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output1",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output2",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output3",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output4",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output5",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output6",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output7",
+            "description": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.output8",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "*.named_header",
+            "description": "If headers are provided, they will also be used alongside the output#. For instance, if you pass in a list in the input0 and add `some_key` the output will be `{\"output0\": \"some_value\", \"some_key\": \"some_value\"}` to make it easier to reference downstream."
+        }
+    ],
+    "platform_version": "5.2.1.78411",
+    "python_version": "3"
+}

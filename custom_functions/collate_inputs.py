@@ -1,6 +1,6 @@
 def collate_inputs(input0=None, input1=None, input2=None, input3=None, input4=None, input5=None, input6=None, input7=None, input8=None, headers=None, **kwargs):
     """
-    Collates lists of inputs to each other using the python zip function, along with extending any lists that are shorter. This allows playbook inputs to be merged together and used in tandem downstream.
+    Collates lists of inputs to each other using the python zip function, along with extending any lists that are shorter than the longest input. One use case would be to allow playbook inputs to be merged together and used in tandem downstream.
     
     Args:
         input0 (CEF type: *)
@@ -12,7 +12,7 @@ def collate_inputs(input0=None, input1=None, input2=None, input3=None, input4=No
         input6 (CEF type: *)
         input7 (CEF type: *)
         input8 (CEF type: *)
-        headers: If headers are included, they will be used as key names for the outputs on top of the default output# naming and can be referenced by name instead of remembering what input goes to which output.
+        headers: If headers are included, they will be used as key names for the outputs on top of the default output naming and can be referenced by name instead of remembering what input goes to which output.
     
     Returns a JSON-serializable object that implements the configured data paths:
         *.output0 (CEF type: *)
@@ -24,7 +24,7 @@ def collate_inputs(input0=None, input1=None, input2=None, input3=None, input4=No
         *.output6 (CEF type: *)
         *.output7 (CEF type: *)
         *.output8 (CEF type: *)
-        *.named_header: If headers are provided, they will also be used alongside the output#. For instance, if you pass in a list in the input0 and add `some_key` the output will be `{"output0": "some_value", "some_key": "some_value"}` to make it easier to reference downstream.
+        *.named_header: If headers are provided, they will also be used alongside the output. For instance, if you pass in a list in the input0 and add `some_key` the output will be `{"output0": "some_value", "some_key": "some_value"}` to make it easier to reference downstream.
     """
     ############################ Custom Code Goes Below This Line #################################
     import json

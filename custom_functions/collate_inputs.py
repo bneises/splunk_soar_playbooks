@@ -12,7 +12,7 @@ def collate_inputs(input0=None, input1=None, input2=None, input3=None, input4=No
         input6 (CEF type: *)
         input7 (CEF type: *)
         input8 (CEF type: *)
-        headers: If headers are included, they will be used as key names for the outputs on top of the default output naming and can be referenced by name instead of remembering what input goes to which output.
+        headers: Comma separated list of headers to use as well as the mapped output names. If headers are included, they will be used as key names for the outputs on top of the default output naming and can be referenced by name instead of remembering what input goes to which output.
     
     Returns a JSON-serializable object that implements the configured data paths:
         *.output0 (CEF type: *)

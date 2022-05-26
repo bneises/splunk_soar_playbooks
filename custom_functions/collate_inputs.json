@@ -1,5 +1,5 @@
 {
-    "create_time": "2022-05-26T14:07:17.717983+00:00",
+    "create_time": "2022-05-26T14:54:19.465960+00:00",
     "custom_function_id": "7d045ab9f3775c17a7cef4af3d8c0451dd6d98b2",
     "description": "Collates lists of inputs to each other using the python zip function, along with extending any lists that are shorter than the longest input. One use case would be to allow playbook inputs to be merged together and used in tandem downstream.",
     "draft_mode": false,
@@ -87,7 +87,7 @@
         },
         {
             "contains_type": [],
-            "description": "If headers are included, they will be used as key names for the outputs on top of the default output naming and can be referenced by name instead of remembering what input goes to which output.",
+            "description": "Comma separated list of headers to use as well as the mapped output names. If headers are included, they will be used as key names for the outputs on top of the default output naming and can be referenced by name instead of remembering what input goes to which output.",
             "input_type": "list",
             "name": "headers",
             "placeholder": ""

@@ -34,6 +34,7 @@ def render_template(template=None, input0=None, input1=None, input2=None, input3
     }
     
     outputs['rendered_text'] = phantom.render_template(template, context)
+    phantom.debug(outputs)
     
     # Return a JSON-serializable object
     assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable

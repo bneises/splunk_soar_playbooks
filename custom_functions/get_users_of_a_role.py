@@ -25,7 +25,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
     )
         
     
-    resp = phantom.requests(
+    resp = phantom.requests.get(
         url,
         params=params,
         verify=False

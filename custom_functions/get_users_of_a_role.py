@@ -32,6 +32,8 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
         params=params,
         verify=False
     )
+    phantom.debug(f'{resp.request.params=}')
+    phantom.debug(f'{resp.data()=}')
     phantom.debug(f'{resp.status_code=}')
         
     outputs = resp.json().get('data', [])

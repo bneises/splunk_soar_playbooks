@@ -18,7 +18,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
     
     url = phantom.build_phantom_rest_url('ph_user')
     params = (
-        ('include_automation', ),
+        ('include_automation', True),
         ('page_size', 0),
         ('_include_role__name', role_name),
         ('_exclude_username__in', ignore_users)

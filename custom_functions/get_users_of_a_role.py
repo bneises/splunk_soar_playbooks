@@ -30,6 +30,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
         params=params,
         verify=False
     )
+    phantom.debug(resp.status_code)
         
     outputs = resp.json().get('data', [])
     

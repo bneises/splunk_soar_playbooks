@@ -18,7 +18,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
     if isinstance(ignore_users, list):
         ignore_users = [f'"{user}"' for user in ignore_users]
     else:
-        ignore_users = f'"{ignore_users}"'
+        ignore_users = f'["{ignore_users}"]'
     
     url = phantom.build_phantom_rest_url('ph_user')
     params = {

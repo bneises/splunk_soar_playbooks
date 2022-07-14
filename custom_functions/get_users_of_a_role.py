@@ -24,7 +24,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
         # ignore_users = [f'"{user}"' for user in ignore_users]
         pass
     else:
-        ignore_users = f'["{ignore_users}"]'
+        ignore_users = [ignore_users]
     phantom.debug(f'{ignore_users=}')
     
     url = phantom.build_phantom_rest_url('ph_user')
@@ -32,7 +32,7 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
         'include_automation': True,
         'page_size': 0,
         '_filter_role__name': f'"{role_name}"',
-        '_exclude_username__in': ignore_users
+        '_exclude_username__in': json.dumps(ignore_users)
     }
     phantom.debug(f'{url=}')
     

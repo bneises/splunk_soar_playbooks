@@ -15,23 +15,19 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
     import phantom.rules as phantom
     
     outputs = []
+    # Format ignore_users as a list
     try:
         ignore_users = json.loads(ignore_users)
     except:
         phantom.debug(f'Not JSON: {ignore_users=}')
-    phantom.debug(f'{ignore_users=}')
-    if isinstance(ignore_users, list):
-        # ignore_users = [f'"{user}"' for user in ignore_users]
-        pass
-    else:
+    if not isinstance(ignore_users, list):
         ignore_users = [ignore_users]
-    phantom.debug(f'{ignore_users=}')
     
     url = phantom.build_phantom_rest_url('ph_user')
     params = {
         'include_automation': True,
         'page_size': 0,
-        '_filter_role__name': f'"{role_name}"',
+        '_filter_role__name': json.dumps(role_name),
         '_exclude_username__in': json.dumps(ignore_users)
     }
     phantom.debug(f'{url=}')

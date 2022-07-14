@@ -15,6 +15,10 @@ def get_users_of_a_role(role_name=None, ignore_users=None, **kwargs):
     import phantom.rules as phantom
     
     outputs = []
+    try:
+        ignore_users = json.loads(ignore_users)
+    except:
+        phantom.debug(f'Not JSON: {ignore_users=}')
     phantom.debug(f'{ignore_users=}')
     if isinstance(ignore_users, list):
         ignore_users = [f'"{user}"' for user in ignore_users]

@@ -1,0 +1,40 @@
+{
+    "create_time": "2022-08-01T17:50:22.926910+00:00",
+    "custom_function_id": "3a4fd6b029410b4dc813973629a60af83e0a4cec",
+    "description": "Get the information of the user running the playbook.",
+    "draft_mode": false,
+    "inputs": [],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "id",
+            "description": "SOAR User ID"
+        },
+        {
+            "contains_type": [
+                "user name"
+            ],
+            "data_path": "username",
+            "description": "SOAR Username"
+        },
+        {
+            "contains_type": [],
+            "data_path": "first_name",
+            "description": "First name"
+        },
+        {
+            "contains_type": [],
+            "data_path": "last_name",
+            "description": "Last name"
+        },
+        {
+            "contains_type": [
+                "email"
+            ],
+            "data_path": "email",
+            "description": "Email address"
+        }
+    ],
+    "platform_version": "5.3.1.84890",
+    "python_version": "3"
+}
